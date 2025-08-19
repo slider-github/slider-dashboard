@@ -64,8 +64,8 @@
 body {
   font-family: var(--font-family);
   background: 
-    linear-gradient(rgba(242, 250, 254, 0.3), rgba(207, 237, 255, 0.3)),
-    url('./assets/gate-site-bg.png') center/cover no-repeat;
+    linear-gradient(rgba(242, 250, 254, 0.2), rgba(207, 237, 255, 0.2)),
+    url('./assets/gate.png') center/cover no-repeat;
   color: var(--slider-900);
   line-height: 1.6;
   min-height: 100vh;
