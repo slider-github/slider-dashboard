@@ -124,8 +124,13 @@
             <p><strong>Nombre:</strong> <span id="userName"></span></p>
             <p><strong>Email:</strong> <span id="userEmail"></span></p>
             
+            <div id="ssoSuccess" class="sso-status" style="background: rgba(30, 64, 175, 0.3); border: 2px solid rgba(255, 255, 255, 0.5); border-radius: 8px; padding: 1rem; margin: 1rem 0; display: none;">
+                ✅ <strong>SSO Exitoso!</strong><br>
+                Autenticado automáticamente desde otra aplicación Slider
+            </div>
+            
             <div class="test-links">
-                <a href="https://test-b.slider.cloud" class="test-link" target="_blank">Ir a Portal B (SSO)</a>
+                <a href="https://dashboard.slider.cloud/test-b/" class="test-link" target="_blank">Ir a Portal B (SSO)</a>
                 <a href="https://dashboard.slider.cloud" class="test-link" target="_blank">Ir a Dashboard</a>
             </div>
             
@@ -147,12 +152,13 @@
                 };
                 
                 this.user = null;
+                this.ssoDetected = false;
                 this.init();
             }
             
             init() {
                 this.bindEvents();
-                this.checkAuthStatus();
+                this.checkSSO();
             }
             
             bindEvents() {
@@ -174,6 +180,32 @@
                 }
             }
             
+            async checkSSO() {
+                // Mostrar indicador SSO
+                const ssoIndicator = document.createElement('div');
+                ssoIndicator.id = 'ssoCheck';
+                ssoIndicator.className = 'sso-status';
+                ssoIndicator.style.cssText = `
+                    background: rgba(30, 64, 175, 0.3);
+                    border: 2px solid rgba(255, 255, 255, 0.5);
+                    border-radius: 8px;
+                    padding: 1rem;
+                    margin: 1rem 0;
+                    display: block;
+                `;
+                ssoIndicator.innerHTML = '✓ Checking SSO status...';
+                
+                const loginScreen = document.getElementById('loginScreen');
+                if (loginScreen) {
+                    loginScreen.appendChild(ssoIndicator);
+                }
+                
+                // Simular un pequeño delay para mostrar el checking
+                await this.sleep(1000);
+                
+                this.checkAuthStatus();
+            }
+
             checkAuthStatus() {
                 const token = localStorage.getItem('test_a_token');
                 const userInfo = localStorage.getItem('test_a_user');
@@ -190,6 +222,31 @@
                     } catch (error) {
                         console.error('Error parsing stored auth data:', error);
                     }
+                } else {
+                    // Verificar SSO con otras apps (igual que Portal B)
+                    const dashboardToken = localStorage.getItem('slider_token');
+                    const testBToken = localStorage.getItem('test_b_token');
+                    
+                    if (dashboardToken || testBToken) {
+                        // Detectar que hay sesión en otra app
+                        this.ssoDetected = true;
+                        const ssoCheck = document.getElementById('ssoCheck');
+                        if (ssoCheck) {
+                            ssoCheck.innerHTML = '🔄 SSO detectado - Iniciando sesión automática...';
+                        }
+                        
+                        // Auto-redirect para SSO silencioso
+                        setTimeout(() => {
+                            this.redirectToLogin();
+                        }, 2000);
+                        return;
+                    }
+                }
+                
+                // Ocultar indicador SSO si no hay sesión
+                const ssoCheck = document.getElementById('ssoCheck');
+                if (ssoCheck) {
+                    ssoCheck.style.display = 'none';
                 }
                 
                 this.showLoginScreen();
@@ -230,6 +287,11 @@
                 
                 document.getElementById('userName').textContent = this.user.name || 'Usuario';
                 document.getElementById('userEmail').textContent = this.getUserEmail();
+                
+                // Mostrar SSO success si fue detectado
+                if (this.ssoDetected) {
+                    document.getElementById('ssoSuccess').style.display = 'block';
+                }
                 
                 document.querySelector('.test-links').style.display = 'block';
             }
@@ -295,6 +357,10 @@
             generateNonce() {
                 return Math.random().toString(36).substring(2, 15) + 
                        Math.random().toString(36).substring(2, 15);
+            }
+            
+            sleep(ms) {
+                return new Promise(resolve => setTimeout(resolve, ms));
             }
         }
         
