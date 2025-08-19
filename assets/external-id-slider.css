@@ -1,0 +1,236 @@
+/* External ID Custom CSS - Slider Branding */
+/* Usando paleta oficial Slider y desktop-Gate_W.png */
+
+:root {
+    /* Paleta oficial Slider */
+    --slider-000: #F2FAFE;
+    --slider-100: #CFEDFF;
+    --slider-200: #A8E1FF;
+    --slider-300: #71D1FF;
+    --slider-400: #2BBDFF;
+    --slider-500: #0099FF;
+    --slider-600: #067DB9;
+    --slider-700: #04649A;
+    --slider-800: #06527B;
+    --slider-900: #073D5D;
+    --slider-1000: #0F2A3D;
+}
+
+/* Background principal con imagen Gate */
+body, .background {
+    background: 
+        linear-gradient(rgba(242, 250, 254, 0.85), rgba(207, 237, 255, 0.85)),
+        url('https://gate.slider.cloud/assets/desktop-Gate_W.png') center/cover no-repeat !important;
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Container principal */
+.sign-in-box, .signin-container, .main-container {
+    background: rgba(255, 255, 255, 0.95) !important;
+    border-radius: 16px !important;
+    box-shadow: 0 20px 40px rgba(6, 125, 185, 0.15) !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    max-width: 400px !important;
+    margin: 2rem auto !important;
+    padding: 2.5rem !important;
+}
+
+/* Logo area */
+.logo, .logo-container, img[alt*="logo"] {
+    max-width: 200px !important;
+    margin: 0 auto 2rem auto !important;
+    display: block !important;
+}
+
+/* Títulos */
+h1, h2, .title, .signin-title {
+    color: var(--slider-800) !important;
+    font-weight: 600 !important;
+    text-align: center !important;
+    margin-bottom: 1.5rem !important;
+}
+
+/* Subtitle */
+.subtitle, .description {
+    color: var(--slider-600) !important;
+    text-align: center !important;
+    margin-bottom: 2rem !important;
+    font-size: 0.95rem !important;
+}
+
+/* Input fields */
+input, .input, .form-control {
+    border: 2px solid var(--slider-200) !important;
+    border-radius: 8px !important;
+    padding: 0.75rem 1rem !important;
+    font-size: 1rem !important;
+    transition: all 0.3s ease !important;
+    background: white !important;
+    color: var(--slider-800) !important;
+}
+
+input:focus, .input:focus, .form-control:focus {
+    border-color: var(--slider-500) !important;
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(0, 153, 255, 0.1) !important;
+}
+
+input::placeholder {
+    color: var(--slider-600) !important;
+}
+
+/* Botones principales */
+button, .button, .btn, .button-primary, input[type="submit"] {
+    background: var(--slider-500) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 12px !important;
+    padding: 1rem 2rem !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    width: 100% !important;
+    margin: 1rem 0 !important;
+}
+
+button:hover, .button:hover, .btn:hover, .button-primary:hover {
+    background: var(--slider-600) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 8px 20px rgba(6, 125, 185, 0.3) !important;
+}
+
+button:active, .button:active, .btn:active {
+    transform: translateY(0) !important;
+}
+
+/* Botones secundarios */
+.button-secondary, .btn-secondary {
+    background: transparent !important;
+    color: var(--slider-600) !important;
+    border: 2px solid var(--slider-300) !important;
+}
+
+.button-secondary:hover, .btn-secondary:hover {
+    background: var(--slider-100) !important;
+    border-color: var(--slider-500) !important;
+}
+
+/* Links */
+a, .link {
+    color: var(--slider-600) !important;
+    text-decoration: none !important;
+    font-weight: 500 !important;
+    transition: color 0.3s ease !important;
+}
+
+a:hover, .link:hover {
+    color: var(--slider-500) !important;
+}
+
+/* Mensajes de error */
+.error, .alert-error, .error-message {
+    background: rgba(239, 68, 68, 0.1) !important;
+    border-left: 4px solid #ef4444 !important;
+    padding: 1rem !important;
+    border-radius: 8px !important;
+    color: #dc2626 !important;
+    margin: 1rem 0 !important;
+}
+
+/* Mensajes de éxito */
+.success, .alert-success {
+    background: rgba(34, 197, 94, 0.1) !important;
+    border-left: 4px solid #22c55e !important;
+    padding: 1rem !important;
+    border-radius: 8px !important;
+    color: #16a34a !important;
+    margin: 1rem 0 !important;
+}
+
+/* Footer */
+.footer, .page-footer {
+    background: rgba(15, 42, 61, 0.9) !important;
+    color: var(--slider-100) !important;
+    padding: 1.5rem !important;
+    text-align: center !important;
+    margin-top: 3rem !important;
+    border-radius: 12px !important;
+}
+
+.footer a, .page-footer a {
+    color: var(--slider-300) !important;
+}
+
+.footer a:hover, .page-footer a:hover {
+    color: var(--slider-100) !important;
+}
+
+/* Checkbox y radio */
+input[type="checkbox"], input[type="radio"] {
+    accent-color: var(--slider-500) !important;
+    width: auto !important;
+    margin-right: 0.5rem !important;
+}
+
+/* Divisores */
+hr, .divider {
+    border: none !important;
+    height: 1px !important;
+    background: var(--slider-200) !important;
+    margin: 2rem 0 !important;
+}
+
+/* Loading spinner */
+.spinner, .loading {
+    border-top-color: var(--slider-500) !important;
+}
+
+/* Dropdown */
+select, .select {
+    border: 2px solid var(--slider-200) !important;
+    border-radius: 8px !important;
+    padding: 0.75rem 1rem !important;
+    background: white !important;
+    color: var(--slider-800) !important;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .sign-in-box, .signin-container, .main-container {
+        margin: 1rem !important;
+        padding: 2rem 1.5rem !important;
+    }
+    
+    .logo, .logo-container {
+        max-width: 150px !important;
+    }
+}
+
+/* Animación de entrada */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.sign-in-box, .signin-container, .main-container {
+    animation: slideInUp 0.5s ease !important;
+}
+
+/* Badge/Pills */
+.badge, .pill {
+    background: var(--slider-500) !important;
+    color: white !important;
+    padding: 0.25rem 0.75rem !important;
+    border-radius: 12px !important;
+    font-size: 0.875rem !important;
+    font-weight: 500 !important;
+}
