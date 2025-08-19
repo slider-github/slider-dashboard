@@ -9,7 +9,7 @@ class SliderDashboard {
             tenantName: 'sliderexid',
             tenantId: 'dd89df17-bd9e-45d5-a78e-947ff00f755e',
             userFlow: 'SliderMainFlow',
-            redirectUri: window.location.origin + '/callback'
+            redirectUri: window.location.origin
         };
 
         this.user = null;
@@ -150,8 +150,8 @@ class SliderDashboard {
             }
         }
         
-        // No valid auth, redirect to login
-        this.redirectToLogin();
+        // No valid auth, show login screen
+        this.showLoginScreen();
     }
 
     /**
@@ -186,6 +186,12 @@ class SliderDashboard {
      */
     showAuthenticatedView() {
         if (!this.user) return;
+        
+        // Hide login screen
+        const loginScreen = document.getElementById('loginScreen');
+        if (loginScreen) {
+            loginScreen.style.display = 'none';
+        }
         
         // Update user info in header
         const userName = document.getElementById('userName');
@@ -445,6 +451,28 @@ class SliderDashboard {
         setTimeout(() => {
             window.location.href = logoutUrl;
         }, 1000);
+    }
+
+    /**
+     * Show login screen instead of auto-redirecting
+     */
+    showLoginScreen() {
+        // Hide loading
+        this.hideLoading();
+        
+        // Show login screen
+        const loginScreen = document.getElementById('loginScreen');
+        if (loginScreen) {
+            loginScreen.style.display = 'flex';
+        }
+        
+        // Bind login button
+        const loginBtn = document.getElementById('loginBtn');
+        if (loginBtn) {
+            loginBtn.addEventListener('click', () => {
+                this.redirectToLogin();
+            });
+        }
     }
 
     /**
