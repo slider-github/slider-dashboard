@@ -64,8 +64,8 @@
 body {
   font-family: var(--font-family);
   background: 
-    linear-gradient(rgba(242, 250, 254, 0.85), rgba(207, 237, 255, 0.85)),
-    url('./assets/airport_desktop_1920x1080.jpg') center/cover no-repeat;
+    linear-gradient(rgba(242, 250, 254, 0.3), rgba(207, 237, 255, 0.3)),
+    url('./assets/gate-site-bg.png') center/cover no-repeat;
   color: var(--slider-900);
   line-height: 1.6;
   min-height: 100vh;
