@@ -1,0 +1,14 @@
+# Deployment artifacts
+*.zip
+deploy.ps1
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

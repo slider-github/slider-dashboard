@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../sliderMaterial/SliderMaterial/content/sliderV01/img/favicon.ico" />
+    <meta name="description" content="Portal central de aplicaciones Slider">
+</head>
+<body>
+    <!-- Header -->
+    <header class="app-bar" role="banner">
+        <div class="app-bar__left">
+            <div class="logo-container">
+                <svg class="slider-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 386.31 86.89">
+                    <path d="M132.57,199.61a53.8,53.8,0,0,1-23.63-5l2.51-16.08c7.08,3.69,13.64,5.49,20,5.49,8.31,0,9.2-4.79,9.2-6.84,0-4.59-4.94-6.64-10.66-9-8.93-3.71-20.05-8.33-20.05-24,0-14.75,11.77-24.67,29.29-24.67a58.21,58.21,0,0,1,20.71,3.4l-2.21,16.22a42.69,42.69,0,0,0-17.7-4c-5.34,0-8.54,2.39-8.54,6.38,0,4.44,4.86,6.3,10.48,8.45,9,3.45,20.24,7.75,20.24,23.63S150.58,199.61,132.57,199.61Z" transform="translate(-8.69 -112.72)" fill="var(--slider-700)"/>
+                    <path d="M182.45,198.59c-8.93,0-12.24-3.2-12.24-11.79V117.49l20.54-.6v52.86c0,15.33.37,24.87.51,28A44.31,44.31,0,0,1,182.45,198.59Z" transform="translate(-8.69 -112.72)" fill="var(--slider-700)"/>
+                    <path d="M212,112.72c6.55,0,11.63,4.07,11.63,11.07,0,6.66-5.08,11.18-11.63,11.18s-11.74-4.52-11.74-11.18C200.26,116.79,205.34,112.72,212,112.72Z" transform="translate(-8.69 -112.72)" fill="var(--slider-500)"/>
+                    <rect x="192.98" y="29.2" width="20.54" height="55.88" fill="var(--slider-700)"/>
+                    <path d="M250.59,199.15c-13.15,0-20.38-9.28-20.38-26.13,0-21.54,11-32.46,32.68-32.46h2.26a1.31,1.31,0,0,0,1.3-1.46,90.12,90.12,0,0,1-.56-10.91v-10.7l20.66-.6v52.86c0,15.33.37,24.87.51,28a44.31,44.31,0,0,1-8.81.86c-5.72,0-8.74-2-9.8-6.56a1.28,1.28,0,0,0-1-1,1,1,0,0,0-.24,0,1.32,1.32,0,0,0-1.08.57C262.67,196.68,257.6,199.15,250.59,199.15ZM261.2,155c-6.71,0-10.11,5-10.11,14.86,0,5.79.83,13.5,8,13.5,2.33,0,4.46-1.14,6.52-3.5a1.29,1.29,0,0,0,.32-.86V157a1.3,1.3,0,0,0-.86-1.22A11.31,11.31,0,0,0,261.2,155Z" transform="translate(-8.69 -112.72)" fill="var(--slider-700)"/>
+                    <path d="M324.85,199.15c-21.61,0-30.42-8.35-30.42-28.84,0-18.07,11-29.75,28.06-29.75,11.3,0,24.78,4.34,24.78,25a64.64,64.64,0,0,1-.42,7.73H315.37a1.28,1.28,0,0,0-1,.5,1.3,1.3,0,0,0-.25,1.11c1.65,6.9,7.34,10.25,17.42,10.25a49.16,49.16,0,0,0,12.36-1.57l1.78,12.49A66.11,66.11,0,0,1,324.85,199.15Zm-2.48-46.07c-3.24,0-7.24,1.62-7.85,9.34a1.38,1.38,0,0,0,.34,1,1.35,1.35,0,0,0,1,.42h12.31a1.31,1.31,0,0,0,1.31-1.31C329.44,154,324.5,153.08,322.37,153.08Z" transform="translate(-8.69 -112.72)" fill="var(--slider-700)"/>
+                    <path d="M355.66,197.8V170c0-15.33-.37-24.87-.51-28a42.47,42.47,0,0,1,8.81-1c6.22,0,9.34,2.68,10.11,8.69a1.32,1.32,0,0,0,1.13,1.13h.17a1.3,1.3,0,0,0,1.2-.82c2.58-6.36,6.8-9.46,12.91-9.46a28.33,28.33,0,0,1,5.52.5l-1.08,18a21.54,21.54,0,0,0-5.46-.69c-5.25,0-9.33,2.91-12.12,8.64a1.25,1.25,0,0,0-.13.57v30.2Z" transform="translate(-8.69 -112.72)" fill="var(--slider-700)"/>
+                    <rect y="11.86" width="73.22" height="73.22" rx="5.1" fill="var(--slider-500)"/>
+                    <path d="M43.43,169.16A4.45,4.45,0,0,0,42.21,163l-13.75-9.17A4.46,4.46,0,0,0,22.28,155h0a4.47,4.47,0,0,0,1.23,6.18l13.75,9.17a4.45,4.45,0,0,0,6.17-1.23Z" transform="translate(-8.69 -112.72)" fill="var(--slider-700)"/>
+                    <path d="M28,164.2s-.19-.44.22-1.76a4.78,4.78,0,0,1,1.59-2.16L42.21,152a4.47,4.47,0,0,0,1.23-6.19h0a4.47,4.47,0,0,0-6.18-1.22l-13.75,9.17a4.47,4.47,0,0,0-1.26,6.19,6.87,6.87,0,0,0,.92,1C23.51,161.22,28,164.2,28,164.2Z" transform="translate(-8.69 -112.72)" fill="var(--slider-000)"/>
+                    <path d="M47.17,153.22a4.44,4.44,0,0,0,1.22,6.17l13.75,9.17a4.46,4.46,0,0,0,6.18-1.22h0a4.46,4.46,0,0,0-1.23-6.19L53.34,152a4.44,4.44,0,0,0-6.17,1.23Z" transform="translate(-8.69 -112.72)" fill="var(--slider-700)"/>
+                    <path d="M62.63,158.18s.19.43-.23,1.76a4.72,4.72,0,0,1-1.59,2.15l-12.42,8.3a4.46,4.46,0,0,0-1.22,6.18h0a4.45,4.45,0,0,0,6.17,1.22l13.75-9.16a4.48,4.48,0,0,0,1.26-6.2,7,7,0,0,0-.92-1C67.09,161.15,62.63,158.18,62.63,158.18Z" transform="translate(-8.69 -112.72)" fill="var(--slider-000)"/>
+                </svg>
+                <h1 class="app-title">Dashboard</h1>
+            </div>
+        </div>
+        
+        <div class="app-bar__right">
+            <div class="user-container">
+                <button class="user-info" type="button" id="userMenuTrigger" aria-expanded="false" aria-haspopup="true">
+                    <div class="user-avatar" id="userAvatar">
+                        <span id="userInitials">U</span>
+                    </div>
+                    <div class="user-details">
+                        <span class="user-name" id="userName">Cargando...</span>
+                        <span class="user-email" id="userEmail">Cargando...</span>
+                    </div>
+                    <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </button>
+                
+                <div class="user-menu" id="userMenu" role="menu" aria-labelledby="userMenuTrigger">
+                    <a href="#" class="user-menu__item" role="menuitem">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                        Mi Perfil
+                    </a>
+                    <a href="#" class="user-menu__item" role="menuitem">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1 1.51V6a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V12a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                        </svg>
+                        Configuración
+                    </a>
+                    <hr class="user-menu__separator">
+                    <button class="user-menu__item user-menu__logout" id="logoutBtn" role="menuitem">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                            <polyline points="16 17 21 12 16 7"></polyline>
+                            <line x1="21" y1="12" x2="9" y2="12"></line>
+                        </svg>
+                        Cerrar Sesión
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content" role="main">
+        <div class="container">
+            <!-- Welcome Section -->
+            <section class="welcome-section">
+                <h2 class="welcome-title">Bienvenido al ecosistema Slider</h2>
+                <p class="welcome-subtitle">Accede a todas tus aplicaciones desde un solo lugar</p>
+            </section>
+
+            <!-- Portal Grid -->
+            <section class="portal-section" aria-labelledby="portals-heading">
+                <h3 id="portals-heading" class="sr-only">Aplicaciones Disponibles</h3>
+                
+                <div class="portal-grid">
+                    <!-- NOTIFY Portal -->
+                    <article class="portal-card" data-portal="notify">
+                        <div class="portal-card__header">
+                            <div class="portal-icon notify-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                                    <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                                </svg>
+                            </div>
+                            <div class="portal-status" data-status="online">
+                                <span class="status-indicator"></span>
+                                <span class="status-text">En línea</span>
+                            </div>
+                        </div>
+                        
+                        <div class="portal-card__content">
+                            <h4 class="portal-title">NOTIFY</h4>
+                            <p class="portal-description">Sistema avanzado de notificaciones y alertas</p>
+                            
+                            <div class="portal-stats">
+                                <div class="stat">
+                                    <span class="stat-value" data-stat="notify-users">127</span>
+                                    <span class="stat-label">Usuarios activos</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value" data-stat="notify-notifications">1,245</span>
+                                    <span class="stat-label">Notificaciones hoy</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="portal-card__footer">
+                            <button class="portal-button" data-portal-url="https://notify.slider.cloud" aria-describedby="notify-description">
+                                <span class="button-text">Acceder a NOTIFY</span>
+                                <svg class="button-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                    <polyline points="7 7 17 7 17 17"></polyline>
+                                </svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- WHISPER Portal -->
+                    <article class="portal-card" data-portal="whisper">
+                        <div class="portal-card__header">
+                            <div class="portal-icon whisper-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                    <circle cx="12" cy="16" r="1"></circle>
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                </svg>
+                            </div>
+                            <div class="portal-status" data-status="online">
+                                <span class="status-indicator"></span>
+                                <span class="status-text">En línea</span>
+                            </div>
+                        </div>
+                        
+                        <div class="portal-card__content">
+                            <h4 class="portal-title">WHISPER</h4>
+                            <p class="portal-description">Generador de claves seguras y contraseñas</p>
+                            
+                            <div class="portal-stats">
+                                <div class="stat">
+                                    <span class="stat-value" data-stat="whisper-keys">89</span>
+                                    <span class="stat-label">Claves generadas</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value" data-stat="whisper-strength">256-bit</span>
+                                    <span class="stat-label">Encriptación</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="portal-card__footer">
+                            <button class="portal-button" data-portal-url="https://whisper.slider.cloud" aria-describedby="whisper-description">
+                                <span class="button-text">Acceder a WHISPER</span>
+                                <svg class="button-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                    <polyline points="7 7 17 7 17 17"></polyline>
+                                </svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- WOF Portal -->
+                    <article class="portal-card" data-portal="wof">
+                        <div class="portal-card__header">
+                            <div class="portal-icon wof-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                                </svg>
+                            </div>
+                            <div class="portal-status" data-status="online">
+                                <span class="status-indicator"></span>
+                                <span class="status-text">En línea</span>
+                            </div>
+                        </div>
+                        
+                        <div class="portal-card__content">
+                            <h4 class="portal-title">WOF</h4>
+                            <p class="portal-description">Base de datos de mascotas y códigos QR</p>
+                            
+                            <div class="portal-stats">
+                                <div class="stat">
+                                    <span class="stat-value" data-stat="wof-pets">542</span>
+                                    <span class="stat-label">Mascotas registradas</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value" data-stat="wof-found">12</span>
+                                    <span class="stat-label">Encontradas hoy</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="portal-card__footer">
+                            <button class="portal-button" data-portal-url="https://wof.slider.cloud" aria-describedby="wof-description">
+                                <span class="button-text">Acceder a WOF</span>
+                                <svg class="button-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                    <polyline points="7 7 17 7 17 17"></polyline>
+                                </svg>
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- ADMIN Portal -->
+                    <article class="portal-card" data-portal="admin">
+                        <div class="portal-card__header">
+                            <div class="portal-icon admin-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M12 1l9 5v7c0 5.55-3.84 10.74-9 12-5.16-1.26-9-6.45-9-12V6l9-5z"></path>
+                                    <polyline points="9 12 12 15 16 10"></polyline>
+                                </svg>
+                            </div>
+                            <div class="portal-status" data-status="restricted">
+                                <span class="status-indicator"></span>
+                                <span class="status-text">Restringido</span>
+                            </div>
+                        </div>
+                        
+                        <div class="portal-card__content">
+                            <h4 class="portal-title">Admin Portal</h4>
+                            <p class="portal-description">Panel de administración del sistema</p>
+                            
+                            <div class="portal-stats">
+                                <div class="stat">
+                                    <span class="stat-value" data-stat="admin-users">3</span>
+                                    <span class="stat-label">Administradores</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-value" data-stat="admin-activity">98%</span>
+                                    <span class="stat-label">Disponibilidad</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="portal-card__footer">
+                            <button class="portal-button" data-portal-url="https://admin.slider.cloud" aria-describedby="admin-description" data-admin-only="true">
+                                <span class="button-text">Acceder a Admin</span>
+                                <svg class="button-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                    <polyline points="7 7 17 7 17 17"></polyline>
+                                </svg>
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p class="loading-text">Conectando...</p>
+        </div>
+    </div>
+
+    <!-- Logout Confirmation Modal -->
+    <div class="modal-overlay" id="logoutModal" role="dialog" aria-labelledby="logout-title" aria-hidden="true">
+        <div class="modal-content">
+            <h3 id="logout-title">Confirmar cierre de sesión</h3>
+            <p>¿Estás seguro que deseas cerrar sesión?</p>
+            <div class="modal-actions">
+                <button class="modal-button modal-button--secondary" id="cancelLogout">Cancelar</button>
+                <button class="modal-button modal-button--primary" id="confirmLogout">Cerrar Sesión</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Screen Reader Only Content -->
+    <div class="sr-only">
+        <div id="notify-description">Sistema de notificaciones para gestionar alertas y comunicaciones</div>
+        <div id="whisper-description">Herramienta de generación de claves seguras y contraseñas</div>
+        <div id="wof-description">Base de datos de mascotas con códigos QR para casos de extravío</div>
+        <div id="admin-description">Panel de administración para gestión del sistema</div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
