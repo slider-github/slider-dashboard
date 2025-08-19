@@ -440,7 +440,7 @@ class SliderDashboard {
         this.showLoading('Cerrando sesión...');
         
         // Redirect to logout endpoint
-        const logoutUrl = `https://${this.config.tenantName}.b2clogin.com/${this.config.tenantName}.onmicrosoft.com/${this.config.userFlow}/oauth2/v2.0/logout?post_logout_redirect_uri=${encodeURIComponent(window.location.origin)}`;
+        const logoutUrl = `https://${this.config.tenantName}.ciamlogin.com/${this.config.tenantId}/oauth2/logout?post_logout_redirect_uri=${encodeURIComponent(window.location.origin)}`;
         
         setTimeout(() => {
             window.location.href = logoutUrl;
@@ -451,7 +451,7 @@ class SliderDashboard {
      * Redirect to login
      */
     redirectToLogin() {
-        const authUrl = `https://${this.config.tenantName}.b2clogin.com/${this.config.tenantName}.onmicrosoft.com/${this.config.userFlow}/oauth2/v2.0/authorize?` +
+        const authUrl = `https://${this.config.tenantName}.ciamlogin.com/${this.config.tenantId}/oauth2/authorize?` +
             `client_id=${this.config.clientId}` +
             `&response_type=id_token` +
             `&redirect_uri=${encodeURIComponent(this.config.redirectUri)}` +
